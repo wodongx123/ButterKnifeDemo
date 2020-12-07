@@ -1,0 +1,14 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':butterknife_annotation')
+
+    // 通过谷歌的autoService注册注解处理器
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc4'
+    implementation 'com.google.auto.service:auto-service:1.0-rc4'
+
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
